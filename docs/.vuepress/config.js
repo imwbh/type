@@ -6,12 +6,12 @@ module.exports = {
         nav:[ // 导航栏配置
           {text: '首页', link: '/' },
           {text: '单片机', link: '/stm32/001-start.html' },
-          {text: '电路', link: '/ic/001-start.html' },
+          {text: '运放', link: '/OPA/001-start.html' },
           {text: '友链', link: '/#'}      
         ],
         sidebar: {
             '/STM32/':getSTM32Sidebar('单片机', '起步'),
-            '/IC/':getICSidebar('电路', '起步')
+            '/OPA/':getOPASidebar('电路', '起步')
         },
         lastUpdated: 'Last Updated', // string | boolean
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
@@ -53,7 +53,7 @@ module.exports = {
       }
     ]
   }
-  function getICSidebar (groupA, introductionA) {
+  function getOPASidebar (groupA, introductionA) {
     return [
       {
         title: groupA,
