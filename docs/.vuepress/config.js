@@ -5,13 +5,18 @@ module.exports = {
         //logo: '/avatar.png',  // 左上角logo
         nav:[ // 导航栏配置
           {text: '首页', link: '/' },
-          {text: '单片机', link: '/stm32/001-start.html' },
-          {text: '运放', link: '/OPA/001-start.html' },
-          {text: '友链', link: '/#'}      
+          {text: 'STM32', link: '/STM32/' },
+          {text: '树莓派', link: '/RaspberryPi/' },
+          {text: '运放电路', link: '/OPA/' },
+          {text: 'PCB', link: '/PCB/' },
+          {text: '友链', link: '/links'}      
         ],
         sidebar: {
-            '/STM32/':getSTM32Sidebar('单片机', '起步'),
-            '/OPA/':getOPASidebar('电路', '起步')
+            
+            '/RaspberryPi/':getRPSidebar('树莓派'),
+            '/STM32/':getSTM32Sidebar('STM32'),
+            '/OPA/':getOPASidebar('运放电路'),
+            '/PCB/':getPCBSidebar('PCB'),
         },
         lastUpdated: 'Last Updated', // string | boolean
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
@@ -39,30 +44,57 @@ module.exports = {
           lang: 'zh', // 将会被设置为 <html> 的 lang 属性
         }
       }
-  }
-  function getSTM32Sidebar (groupA, introductionA) {
+}
+
+
+
+function getRPSidebar (groupA) {
     return [
-      {
+        {
         title: groupA,
         collapsable: false,
-        sidebarDepth: 2,
         children: [
-          ['001-start', introductionA],
-          '002-build-your-repo',
+            ''
         ]
-      }
+        }
     ]
-  }
-  function getOPASidebar (groupA, introductionA) {
+}
+
+function getSTM32Sidebar(groupA) {
     return [
-      {
+        {
         title: groupA,
         collapsable: false,
-        sidebarDepth: 2,
         children: [
-          ['001-start', introductionA],
-          '002-build-your-repo',
+            ''
         ]
-      }
+        }
     ]
-  }
+}
+
+function getOPASidebar (groupA) {
+    return [
+        {
+        title: groupA,
+        collapsable: false,
+        children: [
+            '',
+            '001-install',
+            '002-basic-use',
+            '003-LM741',
+        ]
+        }
+    ]
+}
+
+function getPCBSidebar (groupA) {
+    return [
+        {
+        title: groupA,
+        collapsable: false,
+        children: [
+            ''
+        ]
+        }
+    ]
+}
