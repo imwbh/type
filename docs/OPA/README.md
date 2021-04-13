@@ -1,46 +1,27 @@
 ---
-title: 运放是什么
+title: TINA-TI安装与使用
 ---
 
-# 运算放大器
+# SPICE模型电路仿真
 
-运算放大器（运放），是电路设计中常见的一种电子元器件。
+> SPICE（Simulation program with integrated circuit emphasis）是最为普遍的电路级模拟程序，各软件厂家提供了Vspice、Hspice、Pspice等不同版本spice软件，其仿真核心大同小异，都是采用了由美国加州Berkeley大学开发的spice模拟算法。——百度百科
 
-通过运放，可以实现许多复杂的电路，也因此成为最难以理解的电子元器件。
+TINA是TI公司的一款SPICE免费电路仿真软件
 
-本页面以LM741为例子学习运放的基本特性。
+> [TI官网](https://www.ti.com.cn/tool/cn/TINA-TI)
 
-# 运放IC
+需要到TI官网注册一个账号才能下载安装包
 
-如图为来自TI[数据手册]([LM741 数据表, 产品信息与支持 | TI.com.cn](https://www.ti.com.cn/product/cn/LM741))的LM741引脚定义
+下载时记得选择`TINA-TI_SIMP_CHINESE`简体中文版本
 
-![LM741](/Snipaste_2021-04-12_15-58-27.png)
+# TINA的使用
 
-我们需要重点关注以下五个引脚：
+这方面的资源网络上很多，这里不赘述，仅贴几个我看过的
 
-- INVERTING INPUT: 反相输入
+[TI官方英文教程](http://www.ti.com/lit/ug/sbou052a/sbou052a.pdf)
 
-- NON-INVERTING INPUT: 正向输入
+[TI官方教程翻译](https://e2echina.ti.com/cfs-file/__key/telligent-evolution-components-attachments/00-52-01-00-00-33-88-81/zhcu008.pdf)
 
-- V+: 电源正极
-- V-: 电源负极
-- OUTPUT: 输出
+[实验室新生成长指南[2.1.1]·TINA-TI简介与入门](https://dalaotech.com/2020/03/17/665/)
 
-# 比较器电路
-
-顾名思义，比较器电路就是用来比较输入大小的电路，当正相输入大于反相输入时，输出电源正极，反之输出负极，我们接下来在TINA中搭建电路来验证是否如此。
-
-在TINA中，我们可以使用元件搜索获取LM741
-
-![LM741](/Snipaste_2021-04-12_16-07-10.png)
-
-如图搭建比较器验证电路，电源正极输入+9V，电源负极输入-9V，开关用来切换大小
-
-![比较器电路](/Snipaste_2021-04-12_16-49-04.png)
-
-当正相输入为9V时，V+>V-；故输出电源正极，
-
-![+>-](/Snipaste_2021-04-12_16-43-00.png)
-
-![->+](/Snipaste_2021-04-12_16-48-01.png)
-
+[[实验室新生成长指南]·TINA-TI基本教程（bilibili）](https://www.bilibili.com/video/BV1oC4y1s7oc/)

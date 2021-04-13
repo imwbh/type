@@ -54,7 +54,8 @@ function getRPSidebar (groupA) {
         title: groupA,
         collapsable: false,
         children: [
-            ''
+            '',
+            '001-raspbian-os'
         ]
         }
     ]
@@ -79,9 +80,9 @@ function getOPASidebar (groupA) {
         collapsable: false,
         children: [
             '',
-            '001-install',
-            '002-basic-use',
-            '003-LM741',
+            '001-Comparator',
+            '002-Buffer-Follower',
+
         ]
         }
     ]
